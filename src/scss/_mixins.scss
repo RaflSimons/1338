@@ -1,0 +1,15 @@
+@mixin button($color: green){
+    height: 24px;
+    min-width: 20px;
+    padding: 3px;
+    text-align: center;
+    position: relative;
+    display: inline-block;
+    &:active, &.active{
+        color: $color;
+    }
+    .button {
+        // @include button(red);
+        margin-left: 10px;
+    }
+}

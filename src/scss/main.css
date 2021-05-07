@@ -1,0 +1,221 @@
+@charset "UTF-8";
+.excel__header {
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  height: 48px;
+  padding: 8px 4px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #0F703B;
+}
+
+.excel .input {
+  color: black;
+  margin: 0;
+  padding: 2px 7px;
+  border: 1px solid transparent;
+  border-radius: 2px;
+  font-size: 18px;
+  height: 20px;
+  line-height: none;
+  outline: none;
+  background: #E1DFDD;
+}
+
+.excel .input:focus {
+  background: white;
+  border: 2px solid;
+}
+
+.excel .input:hover {
+  background: white;
+}
+
+.excel__toolbar {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 40px;
+  height: 40px;
+  border-top: 1px solid green;
+  border-bottom: 1px solid green;
+  padding: 7px 10px;
+  display: flex;
+}
+
+.excel__toolbar .button {
+  height: 24px;
+  min-width: 20px;
+  padding: 3px;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.excel__toolbar .button:active, .excel__toolbar .button.active {
+  color: green;
+}
+
+.excel__toolbar .button .button {
+  margin-left: 10px;
+}
+
+.excel__toolbar .btn_s {
+  margin-left: 10px;
+}
+
+.excel__formula {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 510px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid green;
+}
+
+.excel__formula .info {
+  margin-top: 20px;
+  font-size: 18px;
+  font-style: italic;
+  text-align: center;
+  border-right: 1px solid green;
+  min-width: 20px;
+}
+
+.excel__formula .input {
+  padding: 4px;
+  font-size: 12px;
+  outline: none;
+  width: 100%;
+  height: 100%;
+  color: #000;
+}
+
+.excel__table {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 98px;
+  overflow-x: auto;
+  padding-bottom: 2px;
+}
+
+.excel__table .row {
+  display: flex;
+  flex-direction: row;
+  min-height: 20px;
+  height: 24px;
+}
+
+.excel__table .row-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 40px;
+  height: 100%;
+  border: 1px solid #c0c0c0;
+  background: #f8f9fa;
+  border-top: none;
+}
+
+.excel__table .row-data {
+  display: flex;
+}
+
+.excel__table .column {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f8f9fa;
+  min-width: 40px;
+  width: 120px;
+  border: 1px solid #c0c0c0;
+  border-top: 0;
+  border-left: 0;
+  height: 100%;
+}
+
+.excel__table .cell {
+  min-width: 40px;
+  padding: 5px;
+  width: 120px;
+  height: 100%;
+  border: 1px solid #e2e3e3;
+  border-top: 0;
+  border-left: 0;
+  color: #111;
+  white-space: nowrap;
+  outline: none;
+}
+
+.excel__table .cell.selected {
+  border: none;
+  outline: 2px solid #3c74ff;
+  z-index: 2;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  /* ползунок скроллбара */
+  /* Стрелки */
+}
+
+* ::-webkit-scrollbar {
+  width: 13px;
+  /* ширина для вертикального скролла */
+  height: 13px;
+  /* высота для горизонтального скролла */
+  background-color: #E7E7E7;
+}
+
+* ::-webkit-scrollbar-thumb {
+  background-color: white;
+  border-radius: 1px;
+  box-shadow: inset 1px 1px 10px #f3faf7;
+  border: 1px solid #BEC1C4;
+}
+
+* ::-webkit-scrollbar-thumb:hover {
+  background-color: white;
+}
+
+* ::-webkit-scrollbar-button:vertical:start:decrement {
+  background: linear-gradient(120deg, #02141a 40%, rgba(71, 56, 56, 0) 41%), linear-gradient(240deg, #02141a 40%, rgba(172, 115, 115, 0) 41%), linear-gradient(0deg, #02141a 30%, rgba(155, 96, 96, 0) 31%);
+  background-color: #f6f8f4;
+  border: 1px solid #BEC1C4;
+}
+
+* ::-webkit-scrollbar-button:vertical:end:increment {
+  background: linear-gradient(300deg, #f6f8f4 40%, rgba(169, 99, 99, 0) 41%), linear-gradient(60deg, #f6f8f4 40%, rgba(189, 108, 108, 0) 41%), linear-gradient(180deg, #f6f8f4 30%, rgba(238, 181, 181, 0) 31%);
+  background-color: #f6f8f4;
+}
+
+* ::-webkit-scrollbar-button:horizontal:start:decrement {
+  background: linear-gradient(30deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(150deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(270deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #f6f8f4;
+}
+
+* ::-webkit-scrollbar-button:horizontal:end:increment {
+  background: linear-gradient(210deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(330deg, #02141a 40%, rgba(0, 0, 0, 0) 41%), linear-gradient(90deg, #02141a 30%, rgba(0, 0, 0, 0) 31%);
+  background-color: #f6f8f4;
+}
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-size: 12px;
+}
+
+.container {
+  max-width: 1170px;
+  margin: auto;
+  height: 1000px;
+}
